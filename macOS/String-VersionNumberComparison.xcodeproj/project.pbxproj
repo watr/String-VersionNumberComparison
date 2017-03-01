@@ -12,7 +12,7 @@
 		2F4C3AC41E655122001A7F1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F4C3AC31E655122001A7F1F /* Assets.xcassets */; };
 		2F4C3AC71E655122001A7F1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F4C3AC51E655122001A7F1F /* Main.storyboard */; };
 		2F4C3AD21E655122001A7F1F /* String_VersionNumberComparisonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4C3AD11E655122001A7F1F /* String_VersionNumberComparisonTests.swift */; };
-		2F4C3ADD1E65515E001A7F1F /* String-VersionNumberComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4C3ADC1E65515E001A7F1F /* String-VersionNumberComparison.swift */; };
+		2F4C3ADD1E65515E001A7F1F /* String+VersionNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4C3ADC1E65515E001A7F1F /* String+VersionNumber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,7 @@
 		2F4C3ACD1E655122001A7F1F /* String-VersionNumberComparisonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "String-VersionNumberComparisonTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4C3AD11E655122001A7F1F /* String_VersionNumberComparisonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String_VersionNumberComparisonTests.swift; sourceTree = "<group>"; };
 		2F4C3AD31E655122001A7F1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2F4C3ADC1E65515E001A7F1F /* String-VersionNumberComparison.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String-VersionNumberComparison.swift"; path = "../../String-VersionNumberComparison.swift"; sourceTree = "<group>"; };
+		2F4C3ADC1E65515E001A7F1F /* String+VersionNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+VersionNumber.swift"; path = "../../String+VersionNumber.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,7 @@
 			children = (
 				2F4C3ABF1E655122001A7F1F /* AppDelegate.swift */,
 				2F4C3AC11E655122001A7F1F /* ViewController.swift */,
-				2F4C3ADC1E65515E001A7F1F /* String-VersionNumberComparison.swift */,
+				2F4C3ADC1E65515E001A7F1F /* String+VersionNumber.swift */,
 				2F4C3AC31E655122001A7F1F /* Assets.xcassets */,
 				2F4C3AC51E655122001A7F1F /* Main.storyboard */,
 				2F4C3AC81E655122001A7F1F /* Info.plist */,
@@ -198,7 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F4C3ADD1E65515E001A7F1F /* String-VersionNumberComparison.swift in Sources */,
+				2F4C3ADD1E65515E001A7F1F /* String+VersionNumber.swift in Sources */,
 				2F4C3AC21E655122001A7F1F /* ViewController.swift in Sources */,
 				2F4C3AC01E655122001A7F1F /* AppDelegate.swift in Sources */,
 			);
