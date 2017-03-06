@@ -9,36 +9,25 @@ import Foundation
 
 extension String {
     func compareVersion(with anotherVersionString: String) -> ComparisonResult {
+        let string1 = self
+        let string2 = anotherVersionString
         
-        func zipVersionNumbers(first: String, second: String) -> Zip2Sequence<[String], [String]>{
-            
-            func componentsFilledByZero(components: [String], resultComponentsCount: Int) -> [String] {
-                if !(components.count < resultComponentsCount) {
-                    return components
-                }
-                
-                var mutated = components
-                let appendCount = resultComponentsCount - components.count
-                if appendCount > 0 {
-                    mutated.append(contentsOf: [String](repeating: "0", count: appendCount))
-                }
-                return mutated
-            }
-            
-            let firstComponents = first.components(separatedBy: ".")
-            let secondComponents = second.components(separatedBy: ".")
-            let maxCount = max(firstComponents.count, secondComponents.count)
-            
-            return zip(componentsFilledByZero(components: firstComponents, resultComponentsCount: maxCount),
-                       componentsFilledByZero(components: secondComponents, resultComponentsCount: maxCount))
-        }
+        let separator: String = "."
         
-        let result: ComparisonResult = zipVersionNumbers(first: self, second: anotherVersionString).reduce(.orderedSame) { (pre, component) in
-            if pre != .orderedSame {
-                return pre
+        let components1 = string1.components(separatedBy: separator)
+        let components2 = string2.components(separatedBy: separator)
+        let maxCount = max(components1.count, components2.count)
+        
+        for i in 0..<maxCount {
+            let zero: String = "0"
+            let a: String = (i < components1.count) ? components1[i] : zero
+            let b: String = (i < components2.count) ? components2[i] : zero
+            
+            let result = a.compare(b, options: .numeric)
+            if result != .orderedSame {
+                return result
             }
-            return component.0.compare(component.1, options: .numeric)
         }
-        return result
+        return .orderedSame
     }
 }
